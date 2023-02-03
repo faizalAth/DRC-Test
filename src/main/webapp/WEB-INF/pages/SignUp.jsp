@@ -61,7 +61,6 @@ $('#submitBtnId').click(function(){
 	$.ajax({
 		type: "POST",
 		data:$('#ignUpForm').serialize(),
-		contentType : false,
 		url:"${pageContext.request.contextPath}/login/signUP",
 		success:function(resData){
 			console.log(resData);
