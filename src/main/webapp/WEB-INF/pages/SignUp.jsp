@@ -41,7 +41,7 @@ rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3
 							</div>
 							<div class="col-12">
 								<label>Age</label>
-								<input class="form-control" type="text" name="age" id="ageId"/>
+								<input class="form-control" type="text" name="age" maxlength="3" id="ageId"/>
 							</div>
 							<div class="col-12 mt-2">
 								<button class="btn btn-success" type="button" name="submitBtn" id="submitBtnId">Sign-UP</button>

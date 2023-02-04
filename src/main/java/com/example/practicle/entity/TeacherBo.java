@@ -6,31 +6,42 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Pattern;
 
 @Entity
 @Table(name = "mst_user")
 public class TeacherBo {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="user_id")
 	private int user_id;
 	
+	@Email(regexp = "^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\\\\.[a-zA-Z.]{2,5}",message = "Please Enter Valid Email I'D.")
 	@Column(name="email_id")
 	private String email_id;
 	
+	@NotEmpty(message = "Please Enter Password.")
 	@Column(name="password")
 	private String password;
 	
+	@Pattern(regexp = "/^[a-zA-Z][a-zA-Z\\\\s]+$/",message = "Please Enter Only Alphabats.")
+	@NotEmpty(message = "Please Enter Name.")
 	@Column(name="name")
 	private String name;
 	
+	@Pattern(regexp = "/^[a-zA-Z][a-zA-Z\\\\s]+$/",message = "Please Enter Only Alphabats.")
+	@NotEmpty(message = "Please Enter User Name.")
 	@Column(name="userName")
 	private String userName;
 	
+	@NotEmpty(message = "Please Choose Gender.")
 	@Column(name="gender")
 	private char gender;
 	
+	@NotEmpty(message = "Please Enter Age")
 	@Column(name="age")
 	private int age;
 
@@ -87,7 +98,7 @@ public class TeacherBo {
 	}
 
 	public void setAge(int age) {
-		this.age = age;
+		this.age = Integer.valueOf(age);
 	}
 
 	@Override
