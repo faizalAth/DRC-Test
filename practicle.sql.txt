@@ -1,0 +1,11 @@
+CREATE SCHEMA `practicle` ;
+
+CREATE TABLE `practicle`.`mst_user` (
+  `user_id` INT NOT NULL AUTO_INCREMENT,
+  `email_id` VARCHAR(100) NOT NULL,
+  `password` VARCHAR(500) NOT NULL,
+  `name` VARCHAR(100) NOT NULL,
+  `userName` VARCHAR(100) NOT NULL,
+  `gender` VARCHAR(1) NOT NULL,
+  `age` INT NOT NULL,
+  PRIMARY KEY (`user_id`));
