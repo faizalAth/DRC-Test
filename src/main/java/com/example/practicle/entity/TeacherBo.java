@@ -7,7 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 
 @Entity
@@ -23,25 +23,25 @@ public class TeacherBo {
 	@Column(name="email_id")
 	private String email_id;
 	
-	@NotEmpty(message = "Please Enter Password.")
+//	@NotBlank(message = "Please Enter Password.")
 	@Column(name="password")
 	private String password;
 	
-	@Pattern(regexp = "/^[a-zA-Z][a-zA-Z\\\\s]+$/",message = "Please Enter Only Alphabats.")
-	@NotEmpty(message = "Please Enter Name.")
+	@Pattern(regexp = "^[a-zA-Z][a-zA-Z\\\\s]+$",message = "Please Enter Only Alphabats.")
+//	@NotBlank(message = "Please Enter Name.")
 	@Column(name="name")
 	private String name;
 	
-	@Pattern(regexp = "/^[a-zA-Z][a-zA-Z\\\\s]+$/",message = "Please Enter Only Alphabats.")
-	@NotEmpty(message = "Please Enter User Name.")
-	@Column(name="userName")
+	@Pattern(regexp = "^[a-zA-Z][a-zA-Z\\\\s]+$",message = "Please Enter Only Alphabats.")
+//	@NotBlank(message = "Please Enter User Name.")
+	@Column(name="username")
 	private String userName;
 	
-	@NotEmpty(message = "Please Choose Gender.")
+//	@NotBlank(message = "Please Choose Gender.")
 	@Column(name="gender")
 	private char gender;
 	
-	@NotEmpty(message = "Please Enter Age")
+//	@NotBlank(message = "Please Enter Age.")
 	@Column(name="age")
 	private int age;
 

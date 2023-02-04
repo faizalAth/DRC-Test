@@ -27,8 +27,9 @@ public class LoginController {
 		if(!result.hasErrors()) {
 			msg=loginServiceImpl.registerUser(bo);
 		}else {
-			throw new ResourceNotFoundException("Please Fill Proper Data.");
+			System.out.println(result.toString());
+//			throw new ResourceNotFoundException("Please Fill Proper Data.");
 		}
-		return ResponseEntity.ok(msg);
+		return ResponseEntity.ok("");
 	}
 }
