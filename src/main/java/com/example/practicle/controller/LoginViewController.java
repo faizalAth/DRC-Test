@@ -10,4 +10,19 @@ public class LoginViewController {
 	public String signUpPage() {
 		return "SignUp";
 	}
+	
+	@RequestMapping("sign-IN")
+	public String signInPage() {
+		return "login";
+	}
+	
+	@RequestMapping("add-student")
+	public String addStudent() {
+		return "addStudent";
+	}
+	
+	@RequestMapping("teached-Dashboard")
+	public String teacherDashboard() {
+		return "teacherDashboard";
+	}
 }

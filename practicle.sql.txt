@@ -9,3 +9,5 @@ CREATE TABLE `practicle`.`mst_user` (
   `gender` VARCHAR(1) NOT NULL,
   `age` INT NOT NULL,
   PRIMARY KEY (`user_id`));
+
+CREATE TABLE `practicle`.`mst_student` (`student_id` INT(5) NULL AUTO_INCREMENT , `role_no` INT(5) NULL , `department` VARCHAR(100) NULL , `name` VARCHAR(100) NULL , `standard` VARCHAR(100) NULL , `gender` VARCHAR(1) NULL , `age` INT(3) NULL , PRIMARY KEY (`student_id`)) ENGINE = InnoDB; 

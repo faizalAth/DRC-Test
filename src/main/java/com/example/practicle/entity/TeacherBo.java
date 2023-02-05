@@ -19,29 +19,23 @@ public class TeacherBo {
 	@Column(name="user_id")
 	private int user_id;
 	
-	@Email(regexp = "^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\\\\.[a-zA-Z.]{2,5}",message = "Please Enter Valid Email I'D.")
+//	@Email(regexp = "^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\\\\.[a-zA-Z.]{2,5}",message = "Please Enter Valid Email I'D.")
 	@Column(name="email_id")
 	private String email_id;
 	
-//	@NotBlank(message = "Please Enter Password.")
 	@Column(name="password")
 	private String password;
 	
-	@Pattern(regexp = "^[a-zA-Z][a-zA-Z\\\\s]+$",message = "Please Enter Only Alphabats.")
-//	@NotBlank(message = "Please Enter Name.")
 	@Column(name="name")
 	private String name;
 	
-	@Pattern(regexp = "^[a-zA-Z][a-zA-Z\\\\s]+$",message = "Please Enter Only Alphabats.")
-//	@NotBlank(message = "Please Enter User Name.")
 	@Column(name="username")
 	private String userName;
 	
-//	@NotBlank(message = "Please Choose Gender.")
 	@Column(name="gender")
 	private char gender;
 	
-//	@NotBlank(message = "Please Enter Age.")
+
 	@Column(name="age")
 	private int age;
 
